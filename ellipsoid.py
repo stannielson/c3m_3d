@@ -34,8 +34,8 @@ class ellipsoid():
         a           Semi-major axis of the ellipsoid (if not in parameters)
         b           Semi-minor axis of the ellipsoid (if not in parameters)
         f           Flattening of the ellipsoid (if not in parameters)
-        epsilon     Linear eccentiricity of the ellipsoid
-        e           First eccenstricity of the ellipsoid
+        epsilon     Linear eccentricity of the ellipsoid
+        e           First eccentricity of the ellipsoid
         e_prime     Second eccentricity of the ellipsoid
         -----------------------------------------------------------------------
 
