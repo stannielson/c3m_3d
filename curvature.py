@@ -28,7 +28,7 @@ class curvature():
         phi_0       Latitude of the origin point (in radians)
         phi         Latitude of the destination point (in radians)
         a           Semi-major axis of the ellipsoid
-        e           First eccentricity of the ellispoid
+        e           First eccentricity of the ellipsoid
         -----------------------------------------------------------------------
 
         Calculated Values
