@@ -4,8 +4,8 @@ Cadastral Measurement Management and Maintenance in Three Dimensions
 Title:          local_polar
 Author:         Stanton K. Nielson, GIS Specialist
                 BLM Wyoming High Desert District/Elmhurst College
-Date:           April 21, 2020
-Version:        1.0
+Date:           May 6, 2020
+Version:        1.1
 Description:    Performs local-polar and polar-local transformation of origin
                 and destination points.
 -------------------------------------------------------------------------------
@@ -82,7 +82,7 @@ class local_polar():
                          alphaL_0=None, zetaL_0=None, **kwargs):
         # Performs polar-local transform for local destination point
         if missing.all(xL, yL, zL) and not missing.any(sL, alphaL_0, zetaL_0):
-            xL, yL, zL = self.__local_destination(sL, alpha_0, zeta_0)
+            xL, yL, zL = self.__local_destination(sL, alphaL_0, zetaL_0)
             kwargs['xL'], kwargs['yL'], kwargs['zL'] = xL, yL, zL
         return kwargs
 
@@ -109,8 +109,8 @@ class local_polar():
         cos_alphaL_0 = math.cos(alphaL_0)
         sin_zetaL_0 = math.sin(zetaL_0)
         cos_zetaL_0 = math.cos(zetaL_0)
-        xL = sL * cos_alphaL_0 * sin_zetaL_0
-        yL = sL * sin_alphaL_0 * sin_zetaL_0
+        yL = sL * cos_alphaL_0 * sin_zetaL_0
+        xL = sL * sin_alphaL_0 * sin_zetaL_0
         zL = sL * cos_zetaL_0
         return xL, yL, zL
 
